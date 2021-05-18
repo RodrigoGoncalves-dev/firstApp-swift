@@ -12,7 +12,8 @@ struct LandMarksApp: App {
     @StateObject private var modelData = ModelData()
     var body: some Scene {
         WindowGroup {
-            HikeView(hike: modelData.hikes[0])
+            ContentView()
+                .environmentObject(modelData)
         }
     }
 }
